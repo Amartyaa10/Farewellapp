@@ -5,16 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AISV6 Farewell 2026</title>
     <style>
-        body{margin:0;background:#0B132B;color:#FFD700;font-family:Arial,Helvetica,sans-serif;min-height:100vh;padding:20px;text-align:center}
-        nav{background:#0B132BEE;padding:15px;border-bottom:4px solid #FFD700;position:fixed;top:0;left:0;right:0;z-index:1000;backdrop-filter:blur(8px)}
-        nav a{color:#FFD700;margin:0 18px;text-decoration:none;font-weight:bold;font-size:1.25em;transition:.3s}
-        nav a:hover{background:#FFD700;color:#0B132B;padding:10px 20px;border-radius:30px}
-        h1{font-size:5em;margin-top:140px;text-shadow:0 0 30px #FFD700,0 0 70px #1E3A8A;animation:g 2s infinite alternate}
-        p{font-size:1.8em;margin:30px}
-        @keyframes g{0%{text-shadow:0 0 20px #FFD700}100%{text-shadow:0 0 80px #FFD700,0 0 120px #1E3A8A}}
+        body{
+            margin:0;
+            background:#0B132B;
+            color:#FFD700;
+            font-family:'Georgia', serif;
+            min-height:100vh;
+            text-align:center;
+            padding:20px;
+        }
+        nav{
+            position:fixed;
+            top:15px;
+            left:50%;
+            transform:translateX(-50%);
+            background:#0B132BDD;
+            padding:12px 30px;
+            border-radius:50px;
+            border:3px solid #FFD700;
+            backdrop-filter:blur(10px);
+            box-shadow:0 0 30px rgba(255,215,0,0.3);
+            z-index:1000;
+        }
+        nav a{
+            color:#FFD700;
+            text-decoration:none;
+            font-weight:bold;
+            margin:0 18px;
+            font-size:1.1em;
+            padding:10px 22px;
+            border-radius:30px;
+            transition:.4s;
+        }
+        nav a:hover{
+            background:#FFD700;
+            color:#0B132B;
+            transform:scale(1.1);
+            box-shadow:0 0 20px #FFD700;
+        }
+        .container{
+            max-width:900px;
+            margin:0 auto;
+            padding-top:140px;
+        }
+        h1{
+            font-size:3.8em;
+            margin:40px 0 60px;
+            text-shadow:0 0 40px #FFD700;
+            animation:glow 2s infinite alternate;
+            letter-spacing:2px;
+        }
+        .text{
+            font-size:1.35em;
+            line-height:1.8;
+            margin:30px auto;
+            max-width:800px;
+            opacity:0.95;
+        }
+        .highlight{
+            font-style:italic;
+            font-size:1.5em;
+            margin:40px 0;
+            color:#FFEA9F;
+        }
+        .emoji{font-size:1.8em;}
+
+        @media (max-width:768px){
+            h1{font-size:2.8em;}
+            .text{font-size:1.2em;}
+            nav a{margin:0 10px; font-size:1em; padding:8px 16px;}
+        }
+
+        @keyframes glow{
+            from {text-shadow:0 0 30px #FFD700;}
+            to {text-shadow:0 0 80px #FFD700, 0 0 120px #1E3A8A;}
+        }
     </style>
 </head>
 <body>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="venue.html">Venue & Dresscode</a>
@@ -24,8 +93,29 @@
         <a href="socials.html">Socials</a>
     </nav>
 
-    <h1>AISV6 FAREWELL 2K26</h1>
-    <p>The biggest night of the year is coming...</p>
-    <p>Stay tuned!</p>
+    <div class="container">
+        <h1>AISV6 FAREWELL 2K26</h1>
+
+        <h2 style="font-size:2.4em; margin:60px 0 40px;">The Last Dance</h2>
+
+        <p class="text">
+            A night to celebrate, laugh a little louder, and make memories that’ll stick around long after school ends.
+        </p>
+
+        <p class="text highlight">
+            The Last Dance is our Class XII farewell — where seniors enjoy their final moments, juniors join in the fun,<br>
+            and everyone comes together on one dance floor.
+        </p>
+
+        <p class="text">
+            Expect great music, fun performances, lots of pictures, and vibes you don’t want to miss.<br>
+            It’s not just a goodbye — it’s a celebration of everything we shared.
+        </p>
+
+        <p class="text" style="font-size:1.8em; margin-top:60px;">
+            Let’s make it a night worth remembering <span class="emoji">✨</span>
+        </p>
+    </div>
+
 </body>
 </html>
