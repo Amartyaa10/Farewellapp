@@ -12,63 +12,16 @@
         nav a:hover{background:#FFD700;color:#0B132B}
         h1{font-size:4.5em;margin:60px 0 30px;text-shadow:0 0 50px #FFD700;animation:g 2s infinite alternate}
         .section{margin:60px auto;max-width:1000px;padding:0 20px}
-
-        /* Dresscode Cards */
-        .dress-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-            gap:30px;
-            margin:60px 0;
-        }
-        .dress-card{
-            background:#0f1a3a;
-            padding:30px;
-            border-radius:20px;
-            border:2px solid #FFD700;
-            box-shadow:0 0 30px rgba(255,215,0,0.3);
-        }
-        .dress-card h3{font-size:1.8em;margin-bottom:12px;color:#FFEA80}
-        .dress-card p{font-size:1.5em;margin:0;line-height:1.6}
-
-        /* Venue Images Grid */
-        .venue-images{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-            gap:25px;
-            margin:80px auto;
-            max-width:1200px;
-            padding:0 20px;
-        }
-        .img-box{
-            aspect-ratio:16/10;
-            background:#0f1a3a;
-            border:3px solid #FFD700;
-            border-radius:20px;
-            overflow:hidden;
-            box-shadow:0 0 40px rgba(255,215,0,0.4);
-            transition:0.4s;
-        }
+        .dress-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin:60px 0}
+        .dress-card{background:#0f1a3a;padding:35px;border-radius:20px;border:2px solid #FFD700;box-shadow:0 0 30px rgba(255,215,0,0.3)}
+        .dress-card h3{font-size:2em;margin-bottom:15px;color:#FFEA80}
+        .dress-card p{font-size:1.8em;margin:0;line-height:1.6}
+        .venue-images{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;margin:80px auto;max-width:1200px;padding:0 20px}
+        .img-box{aspect-ratio:16/10;background:#0f1a3a;border:3px solid #FFD700;border-radius:20px;overflow:hidden;box-shadow:0 0 40px rgba(255,215,0,0.4);transition:0.4s}
         .img-box:hover{transform:scale(1.05);box-shadow:0 0 60px #FFD700}
-        .img-box img{
-            width:100%;
-            height:100%;
-            object-fit:cover;
-            display:block;
-        }
-        .placeholder{
-            width:100%;height:100%;
-            display:flex;align-items:center;justify-content:center;
-            background:linear-gradient(45deg,#1a2a5f,#0B132B);
-            font-size:1.4em;
-            color:#aa9;
-        }
-
-        @media(max-width:768px){
-            h1{font-size:3.4em}
-            .dress-grid,.venue-images{gap:20px}
-            .dress-card h3{font-size:1.6em}
-            .dress-card p{font-size:1.3em}
-        }
+        .img-box img{width:100%;height:100%;object-fit:cover}
+        .placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(45deg,#1a2a5f,#0B132B);font-size:1.5em;color:#aa9}
+        @media(max-width:768px){h1{font-size:3.4em}.dress-card h3{font-size:1.7em}.dress-card p{font-size:1.5em}}
         @keyframes g{from{text-shadow:0 0 40px #FFD700}to{text-shadow:0 0 90px #FFD700}}
     </style>
 </head>
@@ -90,10 +43,10 @@
     <div class="section">
         <h2 style="font-size:2.8em;color:#FFEA80;margin-bottom:50px">Dress to Impress</h2>
         <div class="dress-grid">
-            <div class="dress-card"><h3>Class XII Boys</h3><p>Tuxedo<br><small>(Black or Midnight Blue)</small></p></div>
-            <div class="dress-card"><h3>Class XII Girls</h3><p>Saree<br><small>(Elegant & graceful)</small></p></div>
-            <div class="dress-card"><h3>Class XI Boys</h3><p>Kurta<br><small>(With waistcoat / bandhgala)</small></p></div>
-            <div class="dress-card"><h3>Class XI Girls</h3><p>Kurti / Ethnic Wear<br><small>(Lehenga, Anarkali, Sharara etc.)</small></p></div>
+            <div class="dress-card"><h3>Class XII Boys</h3><p>Tuxedo</p></div>
+            <div class="dress-card"><h3>Class XII Girls</h3><p>Saree</p></div>
+            <div class="dress-card"><h3>Class XI Boys</h3><p>Kurta</p></div>
+            <div class="dress-card"><h3>Class XI Girls</h3><p>Kurti / Ethnic Wear</p></div>
         </div>
     </div>
 
@@ -108,7 +61,7 @@
             <div class="img-box"><div class="placeholder">Venue Photo 5</div></div>
             <div class="img-box"><div class="placeholder">Venue Photo 6</div></div>
         </div>
-        <p style="font-size:1.5em;margin-top:50px;opacity:0.9">More photos dropping soon</p>
+        <p style="font-size:1.6em;margin-top:60px;opacity:0.9">More photos dropping soon</p>
     </div>
 
 </body>
