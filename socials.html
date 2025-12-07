@@ -5,28 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socials - AISV6 Farewell 2026</title>
     <style>
-        body{margin:0;background:#0B132B;color:#FFD700;font-family:Arial,Helvetica,sans-serif;min-height:100vh;padding:20px;text-align:center}
-        nav{background:#0B132BEE;padding:15px;border-bottom:4px solid #FFD700;position:fixed;top:0;left:0;right:0;z-index:1000;backdrop-filter:blur(8px)}
-        nav a{color:#FFD700;margin:0 18px;text-decoration:none;font-weight:bold;font-size:1.25em;transition:.3s}
-        nav a:hover{background:#FFD700;color:#0B132B;padding:10px 20px;border-radius:30px}
-        h1{font-size:4.8em;margin-top:140px;text-shadow:0 0 40px #FFD700;animation:g 2s infinite alternate}
-        .btn{display:inline-block;margin:40px 20px;padding:25px 80px;background:#FFD700;color:#0B132B;font-size:2.4em;font-weight:bold;border-radius:25px;box-shadow:0 0 50px #FFD700;transition:.4s;text-decoration:none}
-        .btn:hover{transform:scale(1.15);box-shadow:0 0 90px #FFD700}
-        @keyframes g{0%{text-shadow:0 0 30px #FFD700}100%{text-shadow:0 0 90px #FFD700,0 0 130px #1E3A8A}}
+        body{margin:0;background:#0B132B;color:#FFD700;font-family:'Georgia',serif;min-height:100vh;text-align:center;padding-top:90px}
+        nav{position:fixed;top:0;left:0;width:100%;background:#0B132BEE;padding:14px 0;border-bottom:3px solid #FFD700;backdrop-filter:blur(10px);z-index:1000;box-shadow:0 4px 20px rgba(255,215,0,0.2)}
+        .nav-container{max-width:1100px;margin:0 auto;display:flex;justify-content:center;flex-wrap:wrap;gap:32px}
+        nav a{color:#FFD700;text-decoration:none;font-weight:bold;font-size:1.05em;padding:8px 18px;border-radius:20px;transition:0.35s}
+        nav a:hover{background:#FFD700;color:#0B132B}
+        h1{font-size:4.5em;margin-top:80px;text-shadow:0 0 50px #FFD700;animation:g 2s infinite alternate}
+        .btn{display:inline-block;margin:50px 20px;padding:22px 70px;background:#FFD700;color:#0B132B;font-size:2.2em;font-weight:bold;border-radius:25px;box-shadow:0 0 50px #FFD700;transition:0.4s;text-decoration:none}
+        .btn:hover{transform:scale(1.12)}
+        @media(max-width:768px){.nav-container{gap:18px} nav a{font-size:0.98em;padding:7px 15px} .btn{font-size:1.8em;padding:18px 50px}}
+        @keyframes g{from{text-shadow:0 0 40px #FFD700}to{text-shadow:0 0 90px #FFD700}}
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="venue.html">Venue & Dresscode</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="sash.html">Sash Titles</a>
-        <a href="payment.html">Payment</a>
-        <a href="socials.html">Socials</a>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="venue.html">Venue & Dresscode</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="sash.html">Sash Titles</a>
+            <a href="payment.html">Payment</a>
+            <a href="socials.html">Socials</a>
+        </div>
     </nav>
 
     <h1>Socials</h1>
-    <p>Follow us for instant updates</p><br><br>
+    <p style="font-size:1.8em">Follow us for instant updates</p><br><br>
 
     <a href="https://www.instagram.com/amityv6_farewell2k26" target="_blank" class="btn">Instagram</a><br><br><br>
     <a href="https://chat.whatsapp.com/C5Rz0rq84NO5JORZYOz8rM" target="_blank" class="btn">WhatsApp Group</a>
