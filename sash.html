@@ -3,47 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sash Titles - AISV6 Farewell 2026</title>
+    <title>Sash Titles Voting - AISV6 Farewell 2026</title>
     <style>
-        body{margin:0;background:#0B132B;color:#FFD700;font-family:Arial,Helvetica,sans-serif;min-height:100vh;padding:20px;text-align:center}
-        nav{background:#0B132BEE;padding:15px;border-bottom:4px solid #FFD700;position:fixed;top:0;left:0;right:0;z-index:1000;backdrop-filter:blur(8px)}
-        nav a{color:#FFD700;margin:0 18px;text-decoration:none;font-weight:bold;font-size:1.25em;transition:.3s}
-        nav a:hover{background:#FFD700;color:#0B132B;padding:10px 20px;border-radius:30px}
-        h1{font-size:4.8em;margin-top:140px;text-shadow:0 0 40px #FFD700,0 0 80px #1E3A8A;animation:g 2s infinite alternate}
-        .form-container{
-            margin:50px auto;
-            width:90%;
-            max-width:800px;
-            border-radius:20px;
-            overflow:hidden;
-            box-shadow:0 0 50px rgba(255,215,0,0.4);
-        }
-        iframe{
-            width:100%;
-            height:100vh;
-            border:none;
-            min-height:2200px; /* adjust if form is longer/shorter */
-        }
-        @keyframes g{0%{text-shadow:0 0 30px #FFD700}100%{text-shadow:0 0 90px #FFD700,0 0 130px #1E3A8A}}
+        body{margin:0;background:#0B132B;color:#FFD700;font-family:'Georgia',serif;min-height:100vh;text-align:center;padding-top:90px}
+        nav{position:fixed;top:0;left:0;width:100%;background:#0B132BEE;padding:14px 0;border-bottom:3px solid #FFD700;backdrop-filter:blur(10px);z-index:1000;box-shadow:0 4px 20px rgba(255,215,0,0.2)}
+        .nav-container{max-width:1100px;margin:0 auto;display:flex;justify-content:center;flex-wrap:wrap;gap:32px}
+        nav a{color:#FFD700;text-decoration:none;font-weight:bold;font-size:1.05em;padding:8px 18px;border-radius:20px;transition:0.35s}
+        nav a:hover{background:#FFD700;color:#0B132B}
+        h1{font-size:3.8em;margin:60px 0 30px;text-shadow:0 0 50px #FFD700;animation:g 2s infinite alternate}
+        .form-container{margin:40px auto;width:95%;max-width:900px;border-radius:20px;overflow:hidden;box-shadow:0 0 40px rgba(255,215,0,0.5)}
+        iframe{width:100%;height:1600px;border:none}
+        @media(max-width:768px){h1{font-size:2.8em} iframe{height:1500px}}
+        @keyframes g{from{text-shadow:0 0 40px #FFD700}to{text-shadow:0 0 90px #FFD700}}
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="venue.html">Venue & Dresscode</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="sash.html">Sash Titles</a>
-        <a href="payment.html">Payment</a>
-        <a href="socials.html">Socials</a>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="venue.html">Venue & Dresscode</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="sash.html">Sash Titles</a>
+            <a href="payment.html">Payment</a>
+            <a href="socials.html">Socials</a>
+        </div>
     </nav>
 
     <h1>Sash Titles Voting</h1>
-    <p style="font-size:1.8em;margin-bottom:40px;">Cast your vote below</p>
+    <p style="font-size:1.6em">Vote for your favourites</p>
 
     <div class="form-container">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmHjJG27ubsAd9O5_pj7L4ibqxppxoRQp73WZfdNxvOcaBvg/viewform?embedded=true" frameborder="0">
-            Loading…
-        </iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmHjJG27ubsAd9O5_pj7L4ibqxppxoRQp73WZfdNxvOcaBvg/viewform?embedded=true" allowfullscreen>Loading…</iframe>
     </div>
 </body>
 </html>
