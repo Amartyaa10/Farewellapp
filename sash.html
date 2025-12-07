@@ -9,9 +9,22 @@
         nav{background:#0B132BEE;padding:15px;border-bottom:4px solid #FFD700;position:fixed;top:0;left:0;right:0;z-index:1000;backdrop-filter:blur(8px)}
         nav a{color:#FFD700;margin:0 18px;text-decoration:none;font-weight:bold;font-size:1.25em;transition:.3s}
         nav a:hover{background:#FFD700;color:#0B132B;padding:10px 20px;border-radius:30px}
-        h1{font-size:4.5em;margin-top:140px;text-shadow:0 0 30px #FFD700,0 0 70px #1E3A8A;animation:g 2s infinite alternate}
-        p{font-size:2em;margin-top:100px}
-        @keyframes g{0%{text-shadow:0 0 20px #FFD700}100%{text-shadow:0 0 80px #FFD700,0 0 120px #1E3A8A}}
+        h1{font-size:4.8em;margin-top:140px;text-shadow:0 0 40px #FFD700,0 0 80px #1E3A8A;animation:g 2s infinite alternate}
+        .form-container{
+            margin:50px auto;
+            width:90%;
+            max-width:800px;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 0 50px rgba(255,215,0,0.4);
+        }
+        iframe{
+            width:100%;
+            height:100vh;
+            border:none;
+            min-height:2200px; /* adjust if form is longer/shorter */
+        }
+        @keyframes g{0%{text-shadow:0 0 30px #FFD700}100%{text-shadow:0 0 90px #FFD700,0 0 130px #1E3A8A}}
     </style>
 </head>
 <body>
@@ -24,7 +37,13 @@
         <a href="socials.html">Socials</a>
     </nav>
 
-    <h1>Sash Titles</h1>
-    <p>Voting titles reveal coming soon</p>
+    <h1>Sash Titles Voting</h1>
+    <p style="font-size:1.8em;margin-bottom:40px;">Cast your vote below</p>
+
+    <div class="form-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmHjJG27ubsAd9O5_pj7L4ibqxppxoRQp73WZfdNxvOcaBvg/viewform?embedded=true" frameborder="0">
+            Loading…
+        </iframe>
+    </div>
 </body>
 </html>
