@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Venue & Dresscode - AISV6 Farewell 2026</title>
 <style>
-    body{margin:0;background:#0B132B;color:#FFD700;font-family:Georgia,serif;min-height:100vh;text-align:center;padding-top:90px}
+    body{margin:0;background:#0B132B;color:#FFD700;font-family:Georgia,serif;min-height:100vh;text-align:center;padding-top:90px;overflow-x:hidden}
     nav{position:fixed;top:0;left:0;width:100%;background:#0B132BEE;padding:14px 0;border-bottom:3px solid #FFD700;backdrop-filter:blur(10px);z-index:1000;box-shadow:0 4px 20px rgba(255,215,0,0.2)}
     .nav-container{max-width:1100px;margin:0 auto;display:flex;justify-content:center;flex-wrap:wrap;gap:32px}
     nav a{color:#FFD700;text-decoration:none;font-weight:bold;font-size:1.05em;padding:8px 18px;border-radius:20px;transition:.35s}
@@ -15,17 +15,14 @@
     .dress-card{background:#0f1a3a;padding:45px 20px;border-radius:25px;border:3px solid #FFD700;box-shadow:0 0 40px rgba(255,215,0,0.4)}
     .dress-card h3{font-size:2.2em;margin-bottom:18px;color:#FFEA80}
     .dress-card p{font-size:2em;font-weight:bold}
-    .venue-images{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:30px;margin:80px auto;max-width:1300px;padding:0 15px}
+    .venue-images{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:30px;margin:80px auto;max-width:1400px;padding:0 15px}
     .img-box{aspect-ratio:16/10;border:5px solid #FFD700;border-radius:25px;overflow:hidden;box-shadow:0 0 60px rgba(255,215,0,0.6);cursor:pointer;transition:.4s}
-    .img-box:hover{transform:scale(1.05);box-shadow:0 0 90px #FFD700}
-    .img-box img{width:100%;height:100%;object-fit:cover;display:block;transition:.3s}
-
-    /* Lightbox Popup */
-    .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:9999;justify-content:center;align-items:center}
-    .lightbox img{max-width:95%;max-height:95vh;border:8px solid #FFD700;border-radius:20px;box-shadow:0 0 80px #FFD700}
-    .close{cursor:pointer;position:absolute;top:30px;right:40px;font-size:50px;color:#FFD700}
-
-    @media(max-width:768px){h1{font-size:3.4em}.dress-grid{grid-template-columns:1fr}}
+    .img-box:hover{transform:scale(1.06);box-shadow:0 0 100px #FFD700}
+    .img-box img{width:100%;height:100%;object-fit:cover;display:block}
+    #lightbox{position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.97);display:none;justify-content:center;align-items:center;z-index:9999;padding:20px;box-sizing:border-box}
+    #lightbox img{max-width:96vw;max-height:96vh;border:8px solid #FFD700;border-radius:25px;box-shadow:0 0 120px #FFD700;object-fit:contain}
+    #lightbox span{position:absolute;top:20px;right:35px;font-size:60px;color:#FFD700;cursor:pointer;font-weight:bold}
+    @media(max-width:768px){h1{font-size:3.4em}#lightbox img{max-width:98vw;max-height:90vh}#lightbox span{top:10px;right:25px;font-size:50px}}
     @keyframes g{from{text-shadow:0 0 40px #FFD700}to{text-shadow:0 0 90px #FFD700}}
 </style>
 </head>
@@ -56,35 +53,25 @@
 
 <h2 style="font-size:2.9em;color:#FFEA80;margin:80px 0 60px">Sneak Peek of the Venue</h2>
 <div class="venue-images">
-    <div class="img-box" onclick="openLightbox('https://i.postimg.cc/tYdk4FcH/farewell1-jpg.jpg')">
-        <img src="https://i.postimg.cc/tYdk4FcH/farewell1-jpg.jpg" alt="Venue">
-    </div>
-    <div class="img-box" onclick="openLightbox('https://i.postimg.cc/Snyr2J0b/farewell2-jpg.jpg')">
-        <img src="https://i.postimg.cc/Snyr2J0b/farewell2-jpg.jpg" alt="Venue">
-    </div>
-    <div class="img-box" onclick="openLightbox('https://i.postimg.cc/0j0m7vKP/farewell3-jpg.jpg')">
-        <img src="https://i.postimg.cc/0j0m7vKP/farewell3-jpg.jpg" alt="Venue">
-    </div>
-    <div class="img-box" onclick="openLightbox('https://i.postimg.cc/G4cQ8H01/farewell4-jpg.jpg')">
-        <img src="https://i.postimg.cc/G4cQ8H01/farewell4-jpg.jpg" alt="Venue">
-    </div>
+    <div class="img-box" onclick="openLightbox(this)"><img src="https://iili.io/fAlIcOu.jpg" alt="Venue"></div>
+    <div class="img-box" onclick="openLightbox(this)"><img src="https://iili.io/fAlI1xj.jpg" alt="Venue"></div>
+    <div class="img-box" onclick="openLightbox(this)"><img src="https://iili.io/fAlIaRe.jpg" alt="Venue"></div>
+    <div class="img-box" onclick="openLightbox(this)"><img src="https://iili.io/fAlIYJ9.jpg" alt="Venue"></div>
+    <div class="img-box" onclick="openLightbox(this)"><img src="https://iili.io/fAlIlDb.jpg" alt="Venue"></div>
 </div>
 
 <p style="font-size:1.9em;margin:80px 0 40px">Venue: KBC Banquet • Date & Time coming soon</p>
 
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <span class="close">×</span>
-    <img id="lightbox-img">
+<!-- FULL-SCREEN LIGHTBOX -->
+<div id="lightbox" onclick="this.style.display='none'">
+    <span onclick="document.getElementById('lightbox').style.display='none'">×</span>
+    <img id="lightboxImg">
 </div>
 
 <script>
-function openLightbox(src) {
-    document.getElementById("lightbox-img").src = src;
-    document.getElementById("lightbox").style.display = "flex";
-}
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
+function openLightbox(e){
+    document.getElementById('lightboxImg').src = e.querySelector('img').src;
+    document.getElementById('lightbox').style.display = 'flex';
 }
 </script>
 
